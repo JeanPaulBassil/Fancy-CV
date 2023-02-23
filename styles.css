@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  /* padding: 10px; */
+  animation: rainbow .3s ease-in-out infinite
+}
+
+@keyframes rainbow {
+  0%  {background-color: red}
+  16.6% { background-color: orange}
+  33.3% { background-color: yellow}
+  50%  {background-color: green}
+  66.6% { background-color: blue}
+  83.3% { background-color: indigo}
+  100%  {background-color: violet}
+}
+
+.header {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+.profile-pic { 
+  border-radius: 50%;
+  inline-size: 5rem;
+  block-size: 5rem;
+  object-fit: cover;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.profile-pic:hover {
+  transform: scale(4) rotate(20400deg);
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  inline-size: 100%;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.id {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  margin-left: 10px;
+  padding-top: 20px;
+}
+
+.id > h1, h2 {
+  margin: 5px;
+}
+
+.socials > ul {
+  display: flex;
+  align-items: center;
+}
+
+.socials > ul > li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.sec{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.sec > .title{
+  display: inline-block;
+  margin-right: 2rem;
+  width: 15%;
+}
+
+.sec p {
+  /* margin: 0; */
+  flex: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+}
+
+.set{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  margin-right: 100px;
+}
+
+.set > p {
+  margin: 0;
+}
+
+@media (max-width: 900px){ 
+  .sec {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+  .experience {
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+  }
+  .set {
+    margin: 20px 100px;
+  }
+  .sec > .title {
+    margin: 0;
+    width: auto;
+  }
+}
